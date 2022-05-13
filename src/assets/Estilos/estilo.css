@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+}
+
+/* FONTES
+font-family: 'Recursive', sans-serif;
+font-family: 'Righteous', cursive;
+*/
+
+
+body{
+    font-family: 'Recursive', sans-serif;
+    
+}
+
+.conteiner-Total{
+    background-color: #FB6B6B;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#spaceBetween{
+    justify-content: space-between;
+}
+#hidden{
+    display: none;
+}
+
+
+.conteiner-Total > figure > img{
+    width: 136px;
+    height: 161px;
+}
+.conteiner-Total > h1{
+    font-family: 'Righteous', cursive;
+    color:white;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: -1.2%;
+    text-align: center;
+    margin: 15px 0;
+}
+.conteiner-Total > button{
+    cursor: pointer;
+    width: 246px;
+    height: 54px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.conteiner-Total > button > p{
+    
+    color: #D70900;
+    font-size: 18px;
+    text-align: center;
+}
+
+.conteiner-Total > header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 48px 0 10px 0;
+}
+
+.conteiner-Total > header > img{
+    width: 52px;
+    height: 60px;
+}
+.conteiner-Total > header > h2{
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    color: white;
+    text-align: center;
+    margin-left: 20px
+}
+
+.conteiner-Total >footer{
+    width: 100vw;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner-Total >footer>article{
+    display: flex;
+}
+.conteiner-Total >footer> h4{
+    font-size: 18px;
+}
+.conteiner-Total >footer> article #wrong{
+    color:#FF3030
+}
+
+.conteiner-Total >footer> article #half-right{
+    color:#FF922E
+}
+
+.conteiner-Total >footer> article #right{
+    color: #2FBE34
+}
+
+.conteiner-Total > .questionCard{
+    height: 100%;
+    display: grid;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    overflow: scroll;
+}
+
+.conteiner-Total > .questionCard article{
+    height: 65px;
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px; 
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.conteiner-Total > .questionCard .verse{
+    height: 131px;
+    width: 300px;
+    padding:18px 15px 6px 15px;
+    border-radius: 5px; 
+    background-color: #FFFFD4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.conteiner-Total > .questionCard .card-face{
+    height: 100%;
+    width: 300px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.conteiner-Total > .questionCard .card-face >figure{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.conteiner-Total > .questionCard .card-face > section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.conteiner-Total > .questionCard .card-face section .botoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.conteiner-Total > .questionCard .card-face section .botoes p{
+    color: white;
+    font-size: 12px;
+}
+.conteiner-Total > .questionCard button{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 85px;
+    height: 37px;
+}
+.conteiner-Total > .questionCard .wrong{
+    
+    background-color: #FF3030;
+}
+.conteiner-Total > .questionCard .half-right{
+    background-color:#FF922E ;
+}
+.conteiner-Total > .questionCard .right{
+    background-color: #2FBE34;
+}
+
+.fim{
+   
+    height: 100px ;
+    width: 100%;
+    background-color: white;
+}

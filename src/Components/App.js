@@ -1,6 +1,8 @@
 import Inicio from "./Inicio"
 import React from "react"
 import Questions from "./Questions"
+import "./../assets/Estilos/css-reset.css"
+import "./../assets/Estilos/estilo.css"
 export default function App(){
     //Logic
     const [tela,setTela] = React.useState("init")

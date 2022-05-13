@@ -1,35 +1,59 @@
+import Question from "./Question"
+import logo_Pequena from "./../assets/images/logo-pequeno.png"
+import React from "react"
+import Footer from "./Footer"
+
+
 export default function Questions(){
+    //Logic
+    
+    const [replied,setReplied]= React.useState(0)
+    const [anwsersIcons,setAnwsersIcons]= React.useState([])
+    const [iconClass, setIconClass] =React.useState([])
+    const arrQuestions = [
+        {ask:"O que é JSX?", anwsers: "R: Uma extensão de linguagem do JavaScript"},
+        {ask:"O React é __", anwsers:"uma biblioteca JavaScript para construção de interfaces"},
+        {ask: " Componentes devem iniciar com __ ", anwsers:"letra maiúscula"},
+        {ask: "Podemos colocar __ dentro do JSX ", anwsers: "expressões"},
+        {ask: "O ReactDOM nos ajuda __ ", anwsers: "interagindo com a DOM para colocar componentes React na mesma"},
+        {ask:"Usamos o npm para __ ", anwsers: "Gerenciar os pacotes necessários e suas dependências"},
+        {ask:"Usamos props para __", anwsers:"passar diferentes informações para componentes "},
+        {ask:"Usamos estado (state) para __", anwsers:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
+    ]
+    
+    function comparador() { 
+            return Math.random() - 0.5;
+    }
+    arrQuestions.sort(comparador)
+  
+    //UI
     return(<>
             <header>
-                <img src="assets/logo-pequeno.png"></img>
+                <img src={logo_Pequena} alt = "logo do ZapRecall"></img>
               <h2> ZapRecall </h2>  
             </header>
+            
             <section className="questionCard">
-                <article>
-                    <h4>Pergunta 1</h4>
-                    <figure> <ion-icon size="large" name="play-outline"></ion-icon></figure>
-                </article>
-                
-                <article>
-                    <h4>Pergunta 2</h4>
-                    <figure> <ion-icon size="large" name="play-outline"></ion-icon></figure>
-                </article>
-
-                <article>
-                    <h4>Pergunta 3</h4>
-                    <figure> <ion-icon size="large" name="play-outline"></ion-icon></figure>
-                </article>
-
-                <article>
-                    <h4>Pergunta 4</h4>
-                    <figure> <ion-icon size="large" name="play-outline"></ion-icon></figure>
-                </article>
-                
-
+            {arrQuestions.map((a, index)=><Question 
+            key={index} 
+            arrQuestions={a} 
+            number={index} 
+            setReplied={setReplied} 
+            replied={replied}
+            anwsersIcons={anwsersIcons}
+            setAnwsersIcons={setAnwsersIcons}
+            iconClass={iconClass}
+            setIconClass={setIconClass}/> )}   
             </section>
-            <footer>
-                <h4> Concluido</h4>
-            </footer>
+
+            {replied === arrQuestions.length? <div className="fim"></div> : "" }
+
+            <Footer 
+            replied={replied} 
+            anwsersIcons={anwsersIcons} 
+            arrQuestions={arrQuestions} 
+            iconClass={iconClass}
+            />
             
     </>)
 }
