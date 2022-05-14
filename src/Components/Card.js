@@ -1,10 +1,13 @@
 import setinha from "./../assets/images/setinha.png"
 import React from "react"
-export default function Card({front, play, arrQuestions,setReplied, replied,anwsersIcons,setAnwsersIcons,iconClass,setIconClass}){
+export default function Card({
+    front, play, arrQuestions,setReplied, replied, setQuestIcon, setIconID ,anwsersIcons, setAnwsersIcons, iconClass, setIconClass}){
     //logic
     const [frontFace,setFrontFace]= React.useState("");
     const [backFace,setBackFace]= React.useState("hidden");
     const [controlClick,setControlClick] = React.useState(false);
+
+    
     function turn(){
         {frontFace ==="" ? setFrontFace("hidden"):setFrontFace("")};
         {backFace === "hidden"? setBackFace(""):setBackFace("hidden")};
@@ -12,29 +15,40 @@ export default function Card({front, play, arrQuestions,setReplied, replied,anws
     function reply(response){
         const newIcons=[...anwsersIcons]
         const newClass=[...iconClass]
+        let nameIcon;
+        
         play();
         turn();
+       
         if (!controlClick){
             setReplied(replied + 1);
             setControlClick(true);
-        
+            
             switch (response){
                 case "wrong":
-                    newIcons.push("close-circle")
-                    newClass.push("wrong")
+                    nameIcon = "close-circle"
+                    newIcons.push(nameIcon)
+                    newClass.push(response)
+                    setQuestIcon(nameIcon)
+                    setIconID(response)
                     break;
                 case "half-right":
-                    newIcons.push("help-circle")
-                    newClass.push("half-right")
+                    nameIcon = "help-circle"
+                    newIcons.push(nameIcon)
+                    newClass.push(response)
+                    setQuestIcon(nameIcon)
+                    setIconID(response)
                     break
                 default:
-                    newIcons.push("checkmark-circle")
-                    newClass.push("right")
+                    nameIcon="checkmark-circle"
+                    newIcons.push(nameIcon)
+                    newClass.push(response)
+                    setQuestIcon(nameIcon)
+                    setIconID(response)
             }
         }
         setIconClass(newClass)
         setAnwsersIcons(newIcons)
-        console.log(newClass)
     }
 
     //UI

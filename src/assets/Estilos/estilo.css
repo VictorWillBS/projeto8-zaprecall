@@ -10,7 +10,10 @@ font-family: 'Righteous', cursive;
 
 body{
     font-family: 'Recursive', sans-serif;
-    
+}
+
+strong{
+    font-weight: 700;
 }
 
 .conteiner-Total{
@@ -83,28 +86,52 @@ body{
 
 .conteiner-Total >footer{
     width: 100vw;
-    height: 70px;
+    max-height: 171px;
+    height: max-content;
+    padding: 15px 0 10px 0;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.conteiner-Total >footer>article{
+.conteiner-Total >footer .icons_anwser{
+    min-height:10px ;
     display: flex;
 }
+
+.conteiner-Total >footer .finish_message{
+    width: 210px;
+    height: 44px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 05px;
+    line-height:21.6px;
+    word-break: keep-all;
+}
+
 .conteiner-Total >footer> h4{
     font-size: 18px;
+    margin: 5px 0 ;
 }
-.conteiner-Total >footer> article #wrong{
+
+.conteiner-Total >footer>.reaction{
+    display: flex;
+}
+.conteiner-Total >footer>.reaction>img  {
+    margin-right: 12px;
+}
+
+
+.conteiner-Total  #wrong{
     color:#FF3030
 }
 
-.conteiner-Total >footer> article #half-right{
+.conteiner-Total  #half-right{
     color:#FF922E
 }
 
-.conteiner-Total >footer> article #right{
+.conteiner-Total  #right{
     color: #2FBE34
 }
 
@@ -128,6 +155,9 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.conteiner-Total > .questionCard > section > article  .stroke{
+    text-decoration: line-through;
 }
 .conteiner-Total > .questionCard .verse{
     height: 131px;
@@ -179,7 +209,7 @@ body{
     height: 37px;
 }
 .conteiner-Total > .questionCard .wrong{
-    
+
     background-color: #FF3030;
 }
 .conteiner-Total > .questionCard .half-right{

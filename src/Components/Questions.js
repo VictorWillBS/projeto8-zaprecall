@@ -2,6 +2,7 @@ import Question from "./Question"
 import logo_Pequena from "./../assets/images/logo-pequeno.png"
 import React from "react"
 import Footer from "./Footer"
+import Finish_Message from "./Finish_Message"
 
 
 export default function Questions(){
@@ -32,7 +33,7 @@ export default function Questions(){
                 <img src={logo_Pequena} alt = "logo do ZapRecall"></img>
               <h2> ZapRecall </h2>  
             </header>
-            
+
             <section className="questionCard">
             {arrQuestions.map((a, index)=><Question 
             key={index} 
@@ -46,14 +47,15 @@ export default function Questions(){
             setIconClass={setIconClass}/> )}   
             </section>
 
-            {replied === arrQuestions.length? <div className="fim"></div> : "" }
+            
 
-            <Footer 
-            replied={replied} 
-            anwsersIcons={anwsersIcons} 
-            arrQuestions={arrQuestions} 
-            iconClass={iconClass}
-            />
+            <Footer> 
+                    {replied === arrQuestions.length? <Finish_Message iconClass={iconClass} /> : "" }
+                    <h4> {replied}/{arrQuestions.length} Concluido</h4>
+                    <article className="icons_anwser">
+                        {anwsersIcons.map((icon,index)=><ion-icon key={index}  size="large" name={icon} id= {iconClass[index]}></ion-icon>)}
+                    </article>
+            </Footer>
             
     </>)
 }
