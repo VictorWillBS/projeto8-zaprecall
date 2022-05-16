@@ -33,12 +33,17 @@ strong{
     display: none;
 }
 
-
-.conteiner-Total > figure > img{
+.conteiner-Total > .init_Screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner-Total > .init_Screen>figure > img{
     width: 136px;
     height: 161px;
 }
-.conteiner-Total > h1{
+.conteiner-Total > .init_Screen > h1{
     font-family: 'Righteous', cursive;
     color:white;
     font-size: 36px;
@@ -47,7 +52,25 @@ strong{
     text-align: center;
     margin: 15px 0;
 }
-.conteiner-Total > button{
+
+
+.conteiner-Total>.init_Screen>input{
+    width: 246px;
+    height: 43px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: start;
+    background-color: white;
+}
+.conteiner-Total>.init_Screen>input::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height:16.41px;
+    color: #ADADAD;
+}
+.conteiner-Total > .init_Screen >button{
     cursor: pointer;
     width: 246px;
     height: 54px;
@@ -57,8 +80,10 @@ strong{
     border: 1px solid #D70900;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-.conteiner-Total > button > p{
+.conteiner-Total > .init_Screen >button:active , .conteiner-Total > .init_Screen >button>p:active{
+    background-color: #E8E8E8;
+}
+.conteiner-Total > .init_Screen >button > p{
     
     color: #D70900;
     font-size: 18px;
@@ -84,9 +109,9 @@ strong{
     margin-left: 20px
 }
 
+
 .conteiner-Total >footer{
     width: 100vw;
-    max-height: 171px;
     height: max-content;
     padding: 15px 0 10px 0;
     background-color: white;
@@ -122,6 +147,21 @@ strong{
     margin-right: 12px;
 }
 
+.conteiner-Total >footer>button{
+    width: 138px;
+    height: 32px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #FB6B6B;
+}
+
+.conteiner-Total >footer>button h5{
+    color: white;
+    font-size: 14px;
+    
+}
 
 .conteiner-Total  #wrong{
     color:#FF3030
