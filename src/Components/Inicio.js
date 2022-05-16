@@ -2,7 +2,7 @@ import logo from "./../assets/images/logo.png"
 import Input_goal from "./Input_Goal"
 export default function Inicio ({setTela,setSpaceBetween, goal, setGoal, numberQuests}){
     //Logic
-    const goalMaxValid = numberQuests>=goal;
+    const goalMaxValid = numberQuests<=goal;
     const goalMinValid = goal<=0
     function initQuestions (){
         if(!goal){
